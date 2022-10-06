@@ -1,5 +1,3 @@
-const ENDPOINT = 'http://localhost:3002';
-
 const getUsers = async () => {
     const response = await axios.get(`${ENDPOINT}/users`);
 
@@ -34,9 +32,10 @@ const addUser = async () => {
         await checkNewUser(newUser, confirmPassword);
 
         axios.post(`${ENDPOINT}/users`, newUser)
-            .then((response) => {
+            .then(async (response) => {
                 const log = `User ${name} created!`
-                popUp(log);
+                await popUp(log);
+                const result = await axios.get(`${ENDPOINT}/email/${email}`);
             }, (error) => {
                 popUp(`Error to create user: `, `${error.response.data.error}`);
             })

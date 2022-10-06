@@ -1,5 +1,3 @@
-const ENDPOINT = 'http://localhost:3002';
-
 const getFormats = async () => {
     const response = await axios.get(`${ENDPOINT}/formats`);
 

@@ -8,6 +8,8 @@ const formats = require('./format.js');
 const books = require('./books.js');
 const logs = require('./logs.js');
 
+const verify = require('./verify.js');
+
 router.use(users);
 router.use(states);
 router.use(cities);
@@ -16,5 +18,7 @@ router.use(categories);
 router.use(formats);
 router.use(books);
 router.use(logs);
+
+router.use(verify);
 
 module.exports = router;

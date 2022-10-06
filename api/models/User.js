@@ -3,7 +3,16 @@ const db = require('../db/index.js');
 
 class User extends Model {
 
-
+    static async findUser(email, password)
+    {
+        return await User.findOne(
+        {
+            where: {
+                email: email,
+                password: password
+            }
+        });
+    }
 }
 
 User.init({

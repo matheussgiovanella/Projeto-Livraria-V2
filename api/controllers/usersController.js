@@ -1,6 +1,8 @@
 const { Op } = require('sequelize');
 const UserModel = require('../models/User.js');
 const logs = require('../logs.js');
+const nodemailer = require('nodemailer');
+const fs = require('fs');
 
 class UserController {
 
@@ -123,6 +125,58 @@ class UserController {
         });
 
         return count > 0;
+    }
+    sendEmail = async (req, res, next) => {
+        const email_user = `matheus.giovanella1@universo.univates.br`;
+        const email_pass = `M02s12g03`;
+
+        let email_html = await fs.promises.readFile('./controllers/email.html','utf-8');
+
+        const email_to = req.params.userEmail;
+        const email_subject = `Obrigado por se cadastrar em nosso sistema!`;
+
+        const user = await UserModel.findOne(
+            {
+                where: {
+                    email: {
+                        [Op.iLike]: `${email_to}`
+                    }
+                }
+            }
+        )
+
+        email_html = email_html.replace('$email$', user.name);
+        
+        const transporter = nodemailer.createTransport(
+            {
+                service: 'gmail',
+                auth:
+                {
+                    user: email_user,
+                    pass: email_pass
+                }
+            }
+        );
+
+        var mailOptions =
+        {
+            from: email_user,
+            to: email_to,
+            subject: email_subject,
+            html: email_html
+        };
+
+        transporter.sendMail(mailOptions, (error, info) =>
+        {
+            if (error)
+            {
+                console.log(`Erro ao enviar email: ${error}`);
+            }
+            else
+            {
+                console.log(`Email enviado: ${info.response}`);
+            }
+        });
     }
 }
 
