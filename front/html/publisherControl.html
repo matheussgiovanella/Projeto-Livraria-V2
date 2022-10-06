@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Publisher control</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../styles/base/reset.css" />
+    <link rel="stylesheet" href="../styles/publisherControl.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/icons.css" />
+    <link rel="stylesheet" href="../styles/table.css" />
+    <link rel="stylesheet" href="../styles/inputs_and_buttons.css" />
+    <link rel="stylesheet" href="../styles/base/fonts.css" />
+    <script src="https://kit.fontawesome.com/1935aea700.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="menu" href="./menu.html">Go Back</a>
+            <a class="user" href="./userControl.html">Users</a>
+            <a class="state" href="./stateControl.html">States</a>
+            <a class="city" href="./cityControl.html">Cities</a>
+            <a class="category" href="./categoryControl.html">Categories</a>
+            <a class="format" href="./formatControl.html">Formats</a>
+            <a class="book" href="./bookControl.html">Books</a>
+        </nav>
+    </header>
+    <div class="form-container">
+        <div class="create">
+            <div class="create-field">
+                <h1 class="title">Add new publisher</h1>
+
+                <label for="name">Name</label>
+                <div>
+                    <input maxlength="45" id="name" />
+                </div>
+
+                <label for="city">City</label>
+                <div>
+                    <select id="city">
+                        <option value="0" selected disabled>SELECT</option>
+                    </select>
+                </div>
+
+                <button onclick="addPublisher()">Create</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-container">
+        <div class="table-field">
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr class="header">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mytable">
+                        <tr>
+                            <th scope="row" colspan="5">Loading...</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../node_modules/blueimp-md5/js/md5.min.js"></script>
+<script src="../control/publisherControl.js"></script>
+<script src="../check/publisherCheck.js"></script>
+
+</html>

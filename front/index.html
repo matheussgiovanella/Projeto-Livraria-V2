@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./styles/base/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <h1 class="page_title">Library Project</h1>
+    <div class="form-container">
+        <div class="sign_in">
+            <div class="sign_in-field">
+                <h1 class="title">Sign In</h1>
+
+                <label for="email">E-mail</label>
+                <div>
+                    <input maxlength="45" id="email"/>
+                </div>
+
+                <label for="password">Password</label>
+                <div>
+                    <input type="password" maxlength="45" id="password"/>
+                </div>
+
+                <button onclick="checkUser()">Sign In</button>
+            </div>
+        </div>
+        <div class="sign_up">
+            <div class="sign_up-field">
+                <h1 class="title">Sign Up</h1>
+
+                <label for="name">Name</label>
+                <div>
+                    <input maxlength="45" id="name" />
+                </div>
+
+                <label for="sex">Sex</label>
+                <div>
+                    <input maxlength="45" id="sex" />
+                </div>
+
+                <label for="age">Age</label>
+                <div>
+                    <input maxlength="3" id="age" />
+                </div>
+
+                <label for="email">E-mail</label>
+                <div>
+                    <input maxlength="45" id="email" />
+                </div>
+
+                <label for="password">Password</label>
+                <div>
+                    <input maxlength="45" id="password" />
+                </div>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <div>
+                    <input maxlength="45" id="confirmPassword" />
+                </div>
+
+                <button onclick="addUser()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="node_modules/blueimp-md5/js/md5.min.js"></script>
+<script src="./control/indexControl.js"></script>
+<script src="./check/userCheck.js"></script>
+
+</html>

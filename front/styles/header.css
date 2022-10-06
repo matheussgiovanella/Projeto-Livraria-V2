@@ -1,0 +1,57 @@
+header {
+    border-top: 2px solid #333333;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.menu:hover {
+    background-color: #3d3d3d;
+    transition: 0.2s;
+}
+
+.user:hover {
+    background-color: #d60000;
+    transition: 0.2s;
+}
+
+.state:hover {
+    background-color: #12d600;
+    transition: 0.2s;
+}
+
+.city:hover {
+    background-color: #0056d6;
+    transition: 0.2s;
+}
+
+.category:hover {
+    background-color: #d600c4;
+    transition: 0.2s;
+}
+
+.publisher:hover {
+    background-color: #d66700;
+    transition: 0.2s;
+}
+
+.format:hover {
+    background-color: #d6c800;
+    transition: 0.2;
+}
+
+.book:hover {
+    background-color: #808080;
+    transition: 0.2s;
+}

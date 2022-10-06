@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js -e js"
+  },
+  "author": "Matheus Staevie Giovanella",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "blueimp-md5": "^2.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "pg": "^8.8.0",
+    "sequelize": "^6.21.4",
+    "sequelizer": "^1.1.4"
+  }
+}

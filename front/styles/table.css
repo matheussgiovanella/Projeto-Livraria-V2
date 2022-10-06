@@ -1,0 +1,111 @@
+.edit {
+    height: 40px;
+    width: 40px;
+    color: #ffffff;
+    background-color: #00c261;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 0px solid #ffffff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: 0px 3px 0px #000000, inset 0px 0px 0px 2px #000000;
+}
+
+.delete {
+    height: 40px;
+    width: 40px;
+    color: #ffffff;
+    background-color: #db0000;
+    border-top: 2px solid #ffffff;
+    border-left: 0px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 3px 0px #000000, inset 0px 0px 0px 2px #000000;
+}
+
+.table-container {
+    display: flex;
+    width: 100%;
+}
+
+.table-field {
+    width: 100%;
+    height: fit-content;
+    padding: 10px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #333333;
+    box-shadow: 0px 5px 0px #000000, inset 0px 0px 0px 5px #000000;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+table tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+table .header {
+    border-bottom: 1px solid #ffffff;
+}
+
+table th {
+    padding: 5px 5px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+table td {
+    padding: 5px 5px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+table .buttons {
+    display: flex;
+    align-items: center;
+}
+
+table td button {
+    height: 25px;
+    width: 40px;
+}
+
+table td .create {
+    height: 25px;
+    width: 80px
+}
+
+.fa-solid {
+    transform: scale(1.3);
+}
+
+.sort-button {
+    height: 30px;
+    width: fit-content;
+    margin-left: 5px;
+    padding: 5px 5px;
+}
+
+.sort-button .fa-solid {
+    height: 15px;
+    width: 15px;
+}
